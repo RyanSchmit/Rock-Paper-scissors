@@ -1,2 +1,2 @@
 # Rock-Paper-scissors
-First Odin project
+First Odin assignment
