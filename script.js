@@ -1,6 +1,5 @@
-let choices = ['rock', 'paper', 'scissors'];
-var computerChoice;
-var userChoice;
+let computerChoice;
+let userChoice;
 
 function computerPlay() {
 	computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -17,7 +16,7 @@ function userPlay() {
 	}
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
 	let losingMessage = "You lost! " + computerChoice + " beats " + userChoice;
 	let winningMessage = "You won! " + userChoice + " beats " + computerChoice;
 	let tieMessage = "It's a tie! You both choose " + userChoice;
@@ -47,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 	userPlay();
 	computerPlay();
-	console.log(playRound(userChoice, computerChoice));
+	console.log(playRound());
 }
 
 game();
