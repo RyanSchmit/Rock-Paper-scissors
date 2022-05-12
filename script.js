@@ -1,5 +1,6 @@
 let computerChoice;
 let userChoice;
+let choices = ["rock", "paper", "scissors"]
 
 function computerPlay() {
 	computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -47,6 +48,7 @@ function game() {
 	userPlay();
 	computerPlay();
 	console.log(playRound());
+	alert(playRound());
 }
 
 game();
