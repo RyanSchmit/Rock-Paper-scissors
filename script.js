@@ -6,17 +6,6 @@ function computerPlay() {
 	computerChoice = choices[Math.floor(Math.random() * 3)];
 }
 
-function userPlay() {
-	userChoice = prompt("Choice rock, paper, or scissors").trim().toLowerCase();
-	while (true) {
-		if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors") {
-			break;
-		} else {
-			userPlay();
-		}
-	}
-}
-
 function playRound() {
 	let losingMessage = "You lost! " + computerChoice + " beats " + userChoice;
 	let winningMessage = "You won! " + userChoice + " beats " + computerChoice;
@@ -45,10 +34,13 @@ function playRound() {
 }
 
 function game() {
-	userPlay();
 	computerPlay();
-	console.log(playRound());
+	userChoice = this.id;
 	alert(playRound());
 }
 
-game();
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+	button.addEventListener('click', game)
+})
+
