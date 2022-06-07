@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="script.js"></script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rock, Paper, Scissors</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body>
-	
+	<div>
+		<h2 class="record">Wins - Loses</h2>
+	</div>
+	<div class="selection-section">
+		<div class="user-choices">
+			<h2 class="title">Your Choice: </h2>
+			<div class="buttons">
+				<a id="rock"><img src="img/rock.png" alt="Rock"></a>
+				<a id="paper"><img src="img/paper.png" alt="Paper"></a>
+				<a id="scissors"><img src="img/scissors.png" alt="Scissors"></a>
+			</div>
+		</div>
+		<div class="computer-choice">
+			<h2 class="title">Computer Choice: </h2>
+			<div class="computer-choice-images">
+				<img class="computer rock" src="img/rock.png" alt="Rock">
+				<img class="computer paper" src="img/paper.png" alt="Paper">
+				<img class="computer scissors" src="img/scissors.png" alt="Scissors">
+			</div>
+		</div>
+	</div>
+	<div class="result">
+		<p>Result: </p>
+		<p id="result">?</p>
+	</div>
 </body>
 </html>
